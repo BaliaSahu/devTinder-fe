@@ -5,6 +5,7 @@ import axios from "axios"
 function Pm() {
       const handleBuyClick=async(type)=>{
             console.log(type)
+            console.log(document.cookie);
             const order=await axios.post(BASE_URL+"/payment/createorders",
                   {type:type},
                   {withCredentials:true}
